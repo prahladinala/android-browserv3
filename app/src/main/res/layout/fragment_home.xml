@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/devinfo"
+    android:weightSum="1"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_urlgo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.0"
+        android:background="#e0e0e0"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:hint="Enter URL Here">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_weight="0.01"
+            android:drawableRight="@drawable/icon_search"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="GO" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wv_brow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.90" />
+
+</LinearLayout>
